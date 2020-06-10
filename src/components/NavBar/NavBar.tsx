@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Primary, PxUnit } from '../../Variables';
+import { APP_ROUTES, RouteContext } from '../../App';
+import { PxUnit } from '../../Mixins';
+import { Primary } from '../../Variables';
+import { NavButton } from '../Button/Button';
 
 const navHeight = PxUnit(4);
 
@@ -24,9 +27,17 @@ const Buttons = styled.div`
 `;
 
 export default function NavBar() {
+  const route = useContext(RouteContext);
+
   return (
-    <Nav>
-      <Buttons>POPLETA</Buttons>
-    </Nav>
+    <>
+      {route !== APP_ROUTES.HOME && (
+        <Nav>
+          <Buttons>
+            <NavButton>Home</NavButton>
+          </Buttons>
+        </Nav>
+      )}
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Grayscale, PxUnit, Secondary, z1 } from '../../../Variables';
+import { PxUnit } from '../../../Mixins';
+import { Grayscale, Secondary, z1 } from '../../../Variables';
 
 const leftTransition = 'left 0.3s';
 const WordTopOffset = PxUnit(2);
@@ -11,7 +12,7 @@ export const Title = styled.div`
   z-index: ${z1};
   color: ${Secondary};
   font-weight: bold;
-  font-size: ${PxUnit(5)};
+  font-size: 50px;
   cursor: pointer;
   transition: ${leftTransition};
   pointer-events: none;
@@ -30,13 +31,13 @@ export const SecondWord = styled(Word)`
 
 export const TriangleBase = styled.div`
   position: relative;
-  top: -0;
+  top: 0;
   bottom: 0;
   left: -5%;
   width: 0;
   height: 0;
   border-right: 25vw solid transparent;
-  border-bottom: 50vw solid ${Grayscale};
+  border-bottom: 100vh solid ${Grayscale};
   cursor: pointer;
   transition: ${leftTransition};
 `;
@@ -103,6 +104,7 @@ export const Triangle = styled(TriangleBase)`
 
     ~ ${Title} {
       left: 10vw;
+      -webkit-text-stroke: 1px white;
 
       ${Word} {
         top: -${WordTopOffset};

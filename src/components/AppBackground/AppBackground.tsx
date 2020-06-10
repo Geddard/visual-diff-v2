@@ -7,7 +7,7 @@ export default function AppBackground({ children }: PropsWithChildren<{}>) {
   const route = useContext(RouteContext);
 
   const colors = {
-    [APP_ROUTES.HOME]: Secondary
+    [APP_ROUTES.HOME]: Secondary,
   };
 
   const Background = styled.div`
@@ -15,8 +15,6 @@ export default function AppBackground({ children }: PropsWithChildren<{}>) {
     overflow: hidden;
     background: ${colors[route]};
   `;
-
-  console.log('POPLETA', route);
 
   return <Background>{children}</Background>;
 }
