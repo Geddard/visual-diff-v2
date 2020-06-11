@@ -1,9 +1,9 @@
+import { APP_ROUTES, RouteContext } from 'App';
+import { NavButton } from 'components/Button/Button';
+import { PxUnit } from 'Mixins';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { APP_ROUTES, RouteContext } from '../../App';
-import { PxUnit } from '../../Mixins';
-import { Primary } from '../../Variables';
-import { NavButton } from '../Button/Button';
+import { Primary } from 'Variables';
 
 const navHeight = PxUnit(4);
 

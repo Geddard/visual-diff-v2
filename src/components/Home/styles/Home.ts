@@ -1,6 +1,6 @@
+import { AA, AfterArea, PxUnit } from 'Mixins';
 import styled from 'styled-components';
-import { AA, AfterArea, PxUnit } from '../../../Mixins';
-import { Grayscale, Secondary, z1 } from '../../../Variables';
+import { Grayscale, Secondary, z1 } from 'Variables';
 
 const leftTransition = 'left 0.3s';
 const WordTopOffset = PxUnit(2);

@@ -1,7 +1,7 @@
+import { PxUnit } from 'Mixins';
 import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
-import { PxUnit } from '../../Mixins';
-import { Primary } from '../../Variables';
+import { Primary } from 'Variables';
 
 const BaseButton = styled.button`
   min-width: 160px;

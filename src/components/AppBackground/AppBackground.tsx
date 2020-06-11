@@ -1,7 +1,7 @@
+import { APP_ROUTES, RouteContext } from 'App';
 import React, { PropsWithChildren, useContext } from 'react';
 import styled from 'styled-components';
-import { APP_ROUTES, RouteContext } from '../../App';
-import { Secondary } from '../../Variables';
+import { Secondary } from 'Variables';
 
 export default function AppBackground({ children }: PropsWithChildren<{}>) {
   const route = useContext(RouteContext);
