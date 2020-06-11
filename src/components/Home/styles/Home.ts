@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PxUnit } from '../../../Mixins';
+import { AA, AfterArea, PxUnit } from '../../../Mixins';
 import { Grayscale, Secondary, z1 } from '../../../Variables';
 
 const leftTransition = 'left 0.3s';
@@ -114,5 +114,35 @@ export const Triangle = styled(TriangleBase)`
         top: ${WordTopOffset};
       }
     }
+  }
+`;
+
+export const HomeWrapper = styled.div`
+  position: relative;
+`;
+
+export const ButtonsWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+`;
+
+export const BigBtn = styled.div`
+  ${AA}
+  ${AfterArea(15)}
+  
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: rotate(1deg);
   }
 `;
